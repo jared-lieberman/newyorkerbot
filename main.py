@@ -33,11 +33,19 @@ def scrape_captions():
 	
 	#https://micromismanagement.com/tag/new-yorker/page/2/
 
-	page_num = 1
+	#page_num = 1
 	
-	reg_url = "https://micromismanagement.com/tag/new-yorker/page/1/"
-	captions_list = get_page_captions(reg_url)
+	#reg_url = "https://micromismanagement.com/tag/new-yorker/page/1/"
+	#captions_list = get_page_captions(reg_url)
 
+	for i in range(10):
+		#print(i)
+		reg_url =  "https://micromismanagement.com/tag/new-yorker/page/" + str(i + 1) + "/"
+		if i + 1 == 1: captions_list = get_page_captions(reg_url)
+		else: captions_list.extend(get_page_captions(reg_url))
+
+	print(len(captions_list))
+	print(captions_list)
 
 
 
