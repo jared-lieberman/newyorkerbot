@@ -47,6 +47,8 @@ def scrape_captions():
 	print(len(captions_list))
 	print(captions_list)
 
+	return(captions_list)
+
 
 
 
